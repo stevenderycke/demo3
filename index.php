@@ -8,6 +8,7 @@
 <body>
 <?php
 $results = file_get_contents('http://demo4:8080/');
+$results = file_get_contents('http://demo1-elia.ocp.mybpsdemo.be/');
 echo $results;
 ?>
 </body>
