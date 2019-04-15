@@ -11,16 +11,10 @@
   <span id="hosts"></span>
 </body>
 <script>
-  const span = document.getElementById('hosts');
-  const url = 'https://randomuser.me/api/?results=10';
-  fetch(url)
-  .then((resp) => resp.json())
-  .then(function(data) {
-    span.html('hoi');
-    })
-  })
-  .catch(function(error) {
-    console.log(JSON.stringify(error));
-  });   
+  $.getJSON("http://demo3/", function(result){
+    $.each(result, function(i, field){
+      $("div").append(field + " ");
+    });
+  });
   </script>
 </html>
