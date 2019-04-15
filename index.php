@@ -7,8 +7,11 @@
 </head>
 <body>
 <?php
-$results = file_get_contents('http://demo4:8080/');
-$results = file_get_contents('http://demo1-elia.ocp.mybpsdemo.be/');
+$url = 'http://demo4:8080/';
+$url = 'http://demo1-elia.ocp.mybpsdemo.be/';
+$url = 'http://demo-different-elia-project.ocp.mybpsdemo.be/';
+echo "fetching $url:";
+$results = @file_get_contents($url);
 echo $results;
 ?>
 </body>
